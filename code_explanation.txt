@@ -1,0 +1,25 @@
+In the third task of my second project, I had to write Huffman coding and decoding program.
+To start off, I copies the Node, Queue and Tree classes to help me out with the problem.
+I split the huffman encoding into few tasks:
+- get frequency of the data: I iterated over the input (O(n) time for iteration) string and put them into dictionary (keys
+represent different characters and values the frequency of characters). I chose this because it's the most convenient,
+fast and simple way to represent the relationship between the variables. I converted this dictionary to a list with
+tuples as its elements and sorted (O(n*logn) time to sort an array/list) it so I could create Nodes from each
+element. Node's value would be (frequency, character)
+- build tree: I created a stack made out of nodes. Because I got sorted list in ascending order from data before,
+after iteration, this stack was sorted in descending order, so I could pop out the first two nodes and make a tree
+out of them. Then I'd insert the node so that it would still be in descending order which takes O(n) time, but the
+length of the list keeps shrinking by so if n is the length of the list at the start, O(n^2) is not the time it
+takes to sort the array in the entire while loop
+- get binary paths: I used dictionaries to represent key as the character and value as it's binary path in the huffman
+tree, because it's the easiest way to present relationship between a character and its path, plus it takes O(1) for
+operations in dictionaries
+- create coded data: when I got all that done, I only had to iterate over the input data and build a binary code
+based on the values of each character from the dictionary I build before (O(n)).
+
+for function huffman decoding, the input was a tree and encoded data. From the tree I got the binary paths to each
+character. In order to help my in decoding function, I created a reversed dictionary - before the characters were
+keys and binary paths values, whereas now I needed keys as binary pathways and values as characters to go over the
+encoded data and check if some part of encoded data is actually a character. I iterated over the original dictionary
+with the aim of getting reversed dictionary (O(n), where n is number of elements in dictionary), checking if a piece
+is actually a character on dictionary takes O(1).
