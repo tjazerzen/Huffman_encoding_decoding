@@ -23,6 +23,8 @@ def return_frequency(data):
     lst.sort(reverse=True)
     return lst
 
+
+# A helper function to the build_tree()
 def sort_values(nodes_list, node):
     node_value, char1 = node.value
     index = 0
@@ -95,6 +97,7 @@ def huffman_encoding_func(data):
     return tree, codes
 
 
+# The function traverses over the encoded data and checks if a certain piece of binary code could actually be a letter
 def huffman_decoding_func(data, tree):
     if data == '':
         return ''
