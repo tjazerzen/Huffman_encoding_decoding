@@ -10,8 +10,8 @@ Pseudocode:
 5. Encode the text into its compressed form
 """
 
-
 def return_frequency(data):
+    # Take a string and determine the relevant frequencies of the characters
     frequency = {}
     for char in data:
         if char in frequency:
@@ -19,7 +19,7 @@ def return_frequency(data):
         else:
             frequency[char] = 1
     lst = [(v, k) for k, v in frequency.items()]
-    
+    # Build and sort a list of tuples from lowest to highest frequencies
     lst.sort(reverse=True)
     return lst
 
@@ -38,6 +38,8 @@ def sort_values(nodes_list, node):
         index += 1
 
 
+# Build a Huffman Tree: nodes are stored in list with their values (frequencies) in descending order.
+# Two nodes with the lowest frequencies form a tree node. That node gets pushed back into the list and the process repeats
 def build_tree(data):
     lst = return_frequency(data)
     nodes_list = []
@@ -60,7 +62,8 @@ def build_tree(data):
     tree.root = root
     return tree
 
-
+# the function traverses over the huffman tree and returns a dictionary with letter as keys and binary value and value.
+# function get_codes() is for encoding purposes
 def get_codes(root):
     if root is None:
         return {}
@@ -80,6 +83,7 @@ def get_codes(root):
     return char_dict
 
 
+# when we've got the dictionary of binary values and huffman tree, tree encoding is simple
 def huffman_encoding_func(data):
     if data == '':
         return None, ''
