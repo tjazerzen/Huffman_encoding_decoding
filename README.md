@@ -23,8 +23,14 @@ Note: In the repository I've got 6 files:
 - Node_class, tree_class and queue_class serve as helper classes here
 - Huffman_encoding_and_decoding is the core of the project here, where tree is built and data encoded and decoded
 - In test_function I've provided some test cases to get a better grasph of what the entire program does
+- Further explanation is provided in code_explanation.txt
 
 # Creator
 Tjaž Eržen
 - LinkedIn: https://www.linkedin.com/in/tjaz-erzen-688aa1190/
 - Github: https://github.com/tjazerzen
+
+# Further research
+Here's a few resources to get deeper understanding of this compression algorithm:
+- visualization of building: https://people.ok.ubc.ca/ylucet/DS/Huffman.html
+- additional explanation: https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
