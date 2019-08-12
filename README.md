@@ -32,5 +32,5 @@ Tjaž Eržen
 
 # Further research
 Here's a few resources to get deeper understanding of this compression algorithm:
-- visualization of building: https://people.ok.ubc.ca/ylucet/DS/Huffman.html
-- additional explanation: https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
+- Visualization of building the tree: https://people.ok.ubc.ca/ylucet/DS/Huffman.html
+- Additional explanation: https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
