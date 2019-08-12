@@ -1,9 +1,17 @@
 from node_class import Node
 from tree_class import Tree
 
+"""
+Pseudocode:
+1. Take a string and determine the relevant frequencies of the characters
+2. Build and sort a list of tuples from lowest to highest frequencies
+3. Build the Huffman Tree by assigning a binary code to each letter, using shorter codes for the more frequent letters
+4. Trim the Huffman Tree (remove the frequencies from the previously built tree)
+5. Encode the text into its compressed form
+"""
+
 
 def return_frequency(data):
-
     frequency = {}
     for char in data:
         if char in frequency:
@@ -11,9 +19,9 @@ def return_frequency(data):
         else:
             frequency[char] = 1
     lst = [(v, k) for k, v in frequency.items()]
+    
     lst.sort(reverse=True)
     return lst
-
 
 def sort_values(nodes_list, node):
     node_value, char1 = node.value
