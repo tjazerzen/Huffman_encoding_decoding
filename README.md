@@ -18,3 +18,8 @@ This is my pseudocode for following project:
 - Encode the text into its compressed form
 - Decode the text from its compressed form
 - You then will need to create encoding, decoding, and sizing schemas
+
+Note: In the repository I've got 6 files:
+- Node_class, tree_class and queue_class serve as helper classes here
+- Huffman_encoding_and_decoding is the core of the project here, where tree is built and data encoded and decoded
+- In test_function I've provided some test cases to get a better grasph of what the entire program does
